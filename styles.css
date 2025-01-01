@@ -18,12 +18,12 @@
     --bg-secondary: #1e293b;
     --text-primary: #E2E8F0;
     /*--text-secondary: #94A3B8;*/
+    --text-secondary: #e2e8f0dd;
     --border-color: #1E293B;
     --card-bg: #1E293B;
     --navbar-bg: rgba(15, 23, 42, 0.8);
 }
 
-/* Theme transition */
 * {
     transition: background-color 0.1s ease, color 0.1s ease;
 }
@@ -53,7 +53,6 @@ html {
     color: var(--accent-color) !important;
 }
 
-/* Theme toggle button */
 .theme-toggle {
     background: none;
     border: none;
@@ -67,7 +66,6 @@ html {
     color: var(--accent-color);
 }
 
-/* Hero section */
 .hero-section {
     padding: 160px 0 100px 0;
 }
@@ -111,7 +109,6 @@ html {
     border-radius: 9999px;
 }
 
-/* Social links */
 .social-link {
     color: var(--text-secondary);
     transition: color 0.1s ease-in-out;
@@ -146,5 +143,5 @@ html {
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.1s ease-in forwards;
+    animation: fadeIn 0.5s ease-in forwards;
 }

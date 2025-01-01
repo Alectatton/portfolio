@@ -1,0 +1,149 @@
+/* Theme variables */
+:root {
+    /* Light theme defaults */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --accent-color: #38BDF8;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --navbar-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --bg-primary: #0F172A;
+    --bg-secondary: #1e293b;
+    --text-primary: #E2E8F0;
+    --text-secondary: #94A3B8;
+    --border-color: #1E293B;
+    --card-bg: #1E293B;
+    --navbar-bg: rgba(15, 23, 42, 0.8);
+}
+
+/* Theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation styling */
+.navbar {
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-primary) !important;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-color);
+}
+
+/* Hero section */
+.hero-section {
+    padding: 160px 0 100px 0;
+}
+
+.hero-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-subtext {
+    color: var(--text-secondary);
+}
+
+/* Work experience */
+.experience-date {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.experience-company {
+    color: var(--accent-color);
+}
+
+/* Project cards */
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-tag {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+/* Social links */
+.social-link {
+    color: var(--text-secondary);
+    transition: color 0.2s ease-in-out;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+}
+
+/* Custom button styles */
+.btn-outline-theme {
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-outline-theme:hover {
+    background-color: var(--border-color);
+    border-color: var(--border-color);
+    color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}

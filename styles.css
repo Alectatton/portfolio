@@ -17,8 +17,8 @@
     /*--text-secondary: #94A3B8;*/
     --accent-color: #88BDBC;
     --text-secondary: #e2e8f0dd;
-    --border-color: #1E293B;
-    --card-bg: #1E293B;
+    --border-color: #88BDBC;
+    --card-bg: #212830;
 }
 
 * {
@@ -34,6 +34,19 @@ body {
 /* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 0px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
 }
 
 /* Navigation styling */

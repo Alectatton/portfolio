@@ -2,6 +2,7 @@
 :root {
     /* Light theme defaults */
     --bg-primary: #ffffff;
+    --bg-primary-gradient: linear-gradient(90deg, #ffffff, #e2e8f0);
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --accent-color: #254E58;
@@ -12,7 +13,8 @@
 /* TODO: Fix dark theme colors */
 /* Dark theme variables */
 [data-theme="dark"] {
-    --bg-primary: #212830;
+    --bg-primary: #0F2027;
+    --bg-primary-gradient: linear-gradient(90deg, #2C5364, #203A43, #0F2027);
     --text-primary: #E2E8F0;
     /*--text-secondary: #94A3B8;*/
     --accent-color: #88BDBC;
@@ -21,14 +23,22 @@
     --card-bg: #212830;
 }
 
+/*
+background: #0F2027;  /* fallback for old browsers 
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+*/
+
 * {
     transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 body {
+    background: var(--bg-primary-gradient);
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Inter', sans-serif;
+    height: 100vh;
 }
 
 /* Smooth scroll behavior */
@@ -37,11 +47,13 @@ html {
 }
 
 .card {
-    background-color: var(--card-bg);
+    background-color: rgba(var(--card-bg), 0.95);
     border: 0px solid var(--border-color);
     border-radius: 12px;
     color: var(--text-primary);
     transition: all 0.4s ease;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
 
 .card:hover {
@@ -51,7 +63,9 @@ html {
 
 /* Navigation styling */
 .navbar {
+    background: var(--bg-primary-gradient);
     background-color: var(--bg-primary);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -61,6 +75,16 @@ html {
 
 .nav-link:hover {
     color: var(--accent-color) !important;
+}
+
+.portrait {
+    max-width: 400px;
+    transition: all 0.4s ease;
+
+}
+
+.portrait:hover {
+    transform: translateY(-5px);
 }
 
 .theme-toggle {

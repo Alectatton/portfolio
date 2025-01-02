@@ -38,7 +38,6 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: 'Inter', sans-serif;
-    height: 100vh;
 }
 
 /* Smooth scroll behavior */
@@ -64,6 +63,7 @@ html {
 /* Navigation styling */
 .navbar {
     background: var(--bg-primary-gradient);
+    opacity: 0.975;
     background-color: var(--bg-primary);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);

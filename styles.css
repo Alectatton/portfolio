@@ -2,27 +2,23 @@
 :root {
     /* Light theme defaults */
     --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --accent-color: #254E58;
     --border-color: #e2e8f0;
     --card-bg: #ffffff;
-    --navbar-bg: rgba(255, 255, 255, 0.8);
 }
 
 /* TODO: Fix dark theme colors */
 /* Dark theme variables */
 [data-theme="dark"] {
-    --bg-primary: #0F172A;
-    --bg-secondary: #1e293b;
+    --bg-primary: #212830;
     --text-primary: #E2E8F0;
     /*--text-secondary: #94A3B8;*/
     --accent-color: #88BDBC;
     --text-secondary: #e2e8f0dd;
     --border-color: #1E293B;
     --card-bg: #1E293B;
-    --navbar-bg: rgba(15, 23, 42, 0.8);
 }
 
 * {
@@ -42,7 +38,7 @@ html {
 
 /* Navigation styling */
 .navbar {
-    background-color: var(--navbar-bg);
+    background-color: var(--bg-primary);
     backdrop-filter: blur(10px);
 }
 

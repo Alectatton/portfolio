@@ -14,6 +14,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,78 +24,55 @@
     <!-- Main Container -->
     <div class="main-wrapper">
         <!-- Top Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom">
             <div class="container" style="max-width: 640px;">
                 <a class="navbar-brand fw-semibold" href="#">Alec Tatton</a>
-                <div class="d-flex gap-3">
-                    <a href="https://github.com/Alectatton" target="_blank" class="nav-link">GitHub</a>
-                    <a href="https://linkedin.com/in/alec-tatton/" target="_blank" class="nav-link">LinkedIn</a>
+                <div class="d-flex gap-3 align-items-center">
+                    <a href="https://github.com/Alectatton" target="_blank" class="nav-link nav-icon" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/alec-tatton/" target="_blank" class="nav-link nav-icon" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
                 </div>
             </div>
         </nav>
 
         <!-- Main Content -->
-        <main class="container" style="max-width: 640px; padding-top: 80px; padding-bottom: 120px;">
+        <main class="container" style="max-width: 640px; padding-top: 80px; padding-bottom: 40px;">
 
             <!-- Hero Section -->
             <section class="py-5">
-                <h1 class="display-3 fw-bold mb-4">Hi! I'm Alec, a full-stack software engineer.</h1>
-                <p class="lead text-muted mb-4">Software engineer based in Salt Lake City.</p>
-                <div class="d-flex gap-2">
-                    <a href="mailto:alec@alectatton.com" class="btn btn-primary">Get in touch</a>
-                    <a href="#experience" class="btn btn-outline-secondary">View work</a>
+                <h1 class="hero-name mb-4">Alec Tatton</h1>
+                <div class="d-flex gap-4 align-items-start">
+                    <img src="assets/alec-portrait.jpeg" alt="Alec Tatton" class="profile-image flex-shrink-0">
+                    <div>
+                        <p class="hero-title mb-2">Full-Stack Software Engineer</p>
+                        <p class="hero-description text-muted mb-0">
+                            Building scalable web applications and APIs with modern technologies. Based in Salt Lake City.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <!-- About Section -->
-            <section class="py-5">
-                <h2 class="h4 fw-semibold mb-4">About</h2>
-                <p class="text-muted">
-                    I'm a full-stack software engineer with experience building scalable web applications,
-                    APIs, and cloud infrastructure. I specialize in modern JavaScript frameworks, backend
-                    development, and DevOps practices.
-                </p>
-            </section>
-
-            <!-- Skills Grid -->
-            <section class="py-5">
-                <h2 class="h4 fw-semibold mb-4">Skills</h2>
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h6 fw-semibold mb-3">Frontend</h3>
-                                <p class="small text-muted mb-1">HTML, CSS, JavaScript</p>
-                                <p class="small text-muted mb-1">Vue.js, React</p>
-                                <p class="small text-muted mb-0">Tailwind, Bootstrap</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h6 fw-semibold mb-3">Backend</h3>
-                                <p class="small text-muted mb-1">Node.js, PHP, Python</p>
-                                <p class="small text-muted mb-1">Laravel, Express</p>
-                                <p class="small text-muted mb-0">MySQL, PostgreSQL</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h3 class="h6 fw-semibold mb-3">DevOps</h3>
-                                <p class="small text-muted mb-1">AWS, Docker</p>
-                                <p class="small text-muted mb-1">GitHub Actions</p>
-                                <p class="small text-muted mb-0">Kubernetes</p>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Skills -->
+            <section class="py-3">
+                <h2 class="h4 fw-semibold mb-3">Technical Skills</h2>
+                <div class="skills-tags">
+                    <span class="skill-tag">Go</span>
+                    <span class="skill-tag">PHP 8</span>
+                    <span class="skill-tag">Laravel</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">DynamoDB</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
                 </div>
             </section>
 
             <!-- Experience Section -->
-            <section id="experience" class="py-5">
+            <section id="experience" class="py-3">
                 <h2 class="h4 fw-semibold mb-4">Experience</h2>
 
                 <div class="mb-5">
@@ -118,7 +98,7 @@
             </section>
 
             <!-- Education Section -->
-            <section class="py-5">
+            <section class="py-3">
                 <h2 class="h4 fw-semibold mb-4">Education</h2>
 
                 <div class="mb-4">
@@ -136,15 +116,15 @@
 
         </main>
 
-        <!-- Fixed Bottom Navigation -->
-        <nav class="navbar fixed-bottom bg-white border-top py-3">
+        <!-- Footer -->
+        <footer class="border-top py-4">
             <div class="container" style="max-width: 640px;">
-                <div class="d-flex justify-content-between w-100 align-items-center">
+                <div class="d-flex justify-content-between align-items-center">
                     <span class="text-muted small">© 2026 Alec Tatton</span>
-                    <a href="mailto:alec@alectatton.com" class="btn btn-sm btn-primary">Contact</a>
+                    <a href="mailto:alec@alectatton.com" class="footer-link">Email</a>
                 </div>
             </div>
-        </nav>
+        </footer>
     </div>
 
     <!-- Bootstrap JS -->

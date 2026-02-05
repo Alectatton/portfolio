@@ -26,7 +26,13 @@
         <!-- Top Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom">
             <div class="container" style="max-width: 640px;">
-                <a class="navbar-brand fw-semibold" href="#">Alec Tatton</a>
+                <div class="d-flex gap-2 align-items-center">
+                    <a href="#" class="nav-pill">About</a>
+                    <a href="#skills" class="nav-pill">Tech</a>
+                    <a href="#experience" class="nav-pill">Experience</a>
+                    <a href="#education" class="nav-pill">Education</a>
+                    <a href="#personal" class="nav-pill">Personal</a>
+                </div>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                     <i class="bi bi-moon" id="theme-icon-dark"></i>
                     <i class="bi bi-sun d-none" id="theme-icon-light"></i>
@@ -36,25 +42,25 @@
         
 
         <!-- Main Content -->
-        <main class="container" style="max-width: 640px; padding-top: 80px; padding-bottom: 40px;">
+        <main class="container" style="max-width: 640px; padding-top: 90px; padding-bottom: 40px;">
 
             <!-- Hero Section -->
             <section class="py-5">
-                <h1 class="hero-name mb-4">Alec Tatton</h1>
-                <div class="d-flex gap-4 align-items-start">
+                <div class="d-flex gap-4 align-items-start mb-4">
                     <img src="assets/updated-portrait.jpeg" alt="Alec Tatton" class="profile-image flex-shrink-0">
                     <div>
-                        <p class="hero-title mb-2">Software Engineer</p>
-                        <p class="hero-description text-muted mb-0">
-                            Building scalable and secure APIs with modern technologies. <br>
-                            Based in Salt Lake City.
-                        </p>
+                        <h1 class="hero-title mb-1">Alec Tatton</h1>
+                        <p class="hero-description text-muted fst-italic mb-0">Software Engineer</p>
                     </div>
                 </div>
+                <p class="hero-description text-muted mb-0">
+                    Building scalable and secure APIs with modern technologies. <br>
+                    Based in Salt Lake City.
+                </p>
             </section>
 
             <!-- Skills -->
-            <section class="py-3 mb-5">
+            <section id="skills" class="py-3 mb-5">
                 <p class="h5 fw-semibold mb-2 text-muted">Tech</p>
 
                 <hr>
@@ -112,7 +118,7 @@
             </section>
 
             <!-- Education Section -->
-            <section class="py-3 mb-2">
+            <section id="education" class="py-3 mb-2">
                 <p class="h5 fw-semibold mb-2 text-muted">Education</p>
 
                 <hr>
@@ -132,6 +138,17 @@
                     </div>
                     <p class="small text-muted mb-1">2020</p>
                 </div>
+            </section>
+
+            <!-- Personal Section -->
+            <section id="personal" class="py-3 mb-2">
+                <p class="h5 fw-semibold mb-2 text-muted">Personal</p>
+
+                <hr>
+
+                <p class="text-muted">
+                    When I'm not coding, I enjoy exploring the outdoors, photography, and learning new technologies.
+                </p>
             </section>
 
         </main>

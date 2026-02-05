@@ -12,22 +12,22 @@
 
     // Set theme
     function setTheme(theme) {
-        html.setAttribute('data-bs-theme', theme);
+        html.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
 
         // Update icons
         if (theme === 'dark') {
-            lightIcon.classList.add('d-none');
-            darkIcon.classList.remove('d-none');
-        } else {
-            darkIcon.classList.add('d-none');
             lightIcon.classList.remove('d-none');
+            darkIcon.classList.add('d-none');
+        } else {
+            darkIcon.classList.remove('d-none');
+            lightIcon.classList.add('d-none');
         }
     }
 
     // Toggle theme
     function toggleTheme() {
-        const currentTheme = html.getAttribute('data-bs-theme');
+        const currentTheme = html.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         setTheme(newTheme);
     }

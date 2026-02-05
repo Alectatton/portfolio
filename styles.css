@@ -72,9 +72,9 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: var(--bg-primary);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(251, 250, 245, 0.8);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
 }
 
 .navbar.border-bottom {
@@ -89,7 +89,7 @@ body {
     color: var(--text-primary);
     font-size: 0.9375rem;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .nav-link:hover {
@@ -98,7 +98,15 @@ body {
 
 .nav-icon {
     font-size: 1.25rem;
-    padding: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-icon:hover {
+    background-color: rgba(61, 64, 60, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
 }
 
 .navbar-brand {
@@ -171,6 +179,15 @@ a:hover {
     text-decoration: none;
 }
 
+/* General link hover effect for inline links */
+main a:not(.skill-tag):not(.nav-link):not(.btn) {
+    transition: all 0.2s ease;
+}
+
+main a:not(.skill-tag):not(.nav-link):not(.btn):hover {
+    color: var(--text-secondary);
+}
+
 .text-primary {
     color: var(--text-primary) !important;
 }
@@ -240,11 +257,19 @@ footer.border-top {
 
 .footer-link {
     color: var(--text-primary);
-    text-decoration: underline;
-    font-size: 0.875rem;
-    transition: color 0.2s ease;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
 }
 
 .footer-link:hover {
     color: var(--text-secondary);
+    background-color: rgba(61, 64, 60, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
 }

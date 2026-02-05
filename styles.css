@@ -53,42 +53,12 @@ a, button, .skill-tag, .nav-icon, .footer-link, .theme-toggle {
     transition: all 0.2s ease;
 }
 
-/* Typography */
-.display-3 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-}
-
-@media (min-width: 768px) {
-    .display-3 {
-        font-size: 3.5rem;
-    }
-}
-
-.lead {
-    font-size: 1.125rem;
-}
-
 /* Hero Section */
 .profile-image {
     width: 60px;
     height: 60px;
     border-radius: 8px;
     object-fit: cover;
-}
-
-.hero-name {
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-}
-
-@media (min-width: 768px) {
-    .hero-name {
-        font-size: 2.5rem;
-    }
 }
 
 .hero-title {
@@ -228,66 +198,6 @@ a, button, .skill-tag, .nav-icon, .footer-link, .theme-toggle {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-.navbar-brand {
-    font-size: 1rem;
-    color: var(--text-primary);
-}
-
-/* Cards */
-.card {
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    transition: all 0.2s ease;
-    background-color: #fff;
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-/* Buttons */
-.btn {
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.btn-primary {
-    background-color: var(--text-primary);
-    border-color: var(--text-primary);
-    border-radius: 8px;
-    padding: 0.625rem 1.25rem;
-    color: var(--bg-primary);
-}
-
-.btn-primary:hover {
-    background-color: var(--text-secondary);
-    border-color: var(--text-secondary);
-    transform: translateY(-1px);
-}
-
-.btn-outline-secondary {
-    border-color: var(--border-color);
-    color: var(--text-primary);
-    border-radius: 8px;
-    padding: 0.625rem 1.25rem;
-}
-
-.btn-outline-secondary:hover {
-    background-color: var(--border-color);
-    border-color: var(--border-color);
-    color: var(--text-primary);
-}
-
-.btn-sm {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-}
-
 /* Links */
 a {
     text-decoration: none;
@@ -321,8 +231,10 @@ section {
 }
 
 section h2 {
-    color: var(--text-secondary);
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
 }
 
 section h3 {

@@ -7,6 +7,7 @@
     --text-muted: #4f564d;
     --border-color: rgba(61, 64, 60, 0.15);
     --accent-color: #4f564d;
+    --content-width: 640px;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,10 @@
     --text-muted: #a3a3a3;
     --border-color: rgba(255, 255, 255, 0.05);
     --accent-color: #a3a3a3;
+}
+
+.content-width {
+    max-width: var(--content-width);
 }
 
 body {

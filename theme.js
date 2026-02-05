@@ -70,3 +70,29 @@
     window.addEventListener('scroll', update);
     update();
 })();
+
+// Copy email to clipboard
+(function() {
+    var btn = document.getElementById('copy-email');
+    var label = document.getElementById('email-label');
+    if (!btn) return;
+
+    btn.addEventListener('click', function() {
+        var email = btn.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(function() {
+            var original = label.textContent;
+            label.classList.add('fade-out');
+            setTimeout(function() {
+                label.textContent = 'Copied!';
+                label.classList.remove('fade-out');
+            }, 200);
+            setTimeout(function() {
+                label.classList.add('fade-out');
+                setTimeout(function() {
+                    label.textContent = original;
+                    label.classList.remove('fade-out');
+                }, 200);
+            }, 1500);
+        });
+    });
+})();

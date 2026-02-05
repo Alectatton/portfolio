@@ -305,12 +305,17 @@ section h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: calc(100% + 2rem);
     padding: 0.75rem 1rem;
     margin-left: -1rem;
     margin-right: -1rem;
     border-radius: 8px;
     color: var(--text-muted);
     text-decoration: none;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
     transition: background-color 0.35s ease;
 }
 
@@ -326,6 +331,15 @@ section h3 {
 
 [data-theme="dark"] .link-row:hover {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Email copy label fade */
+#email-label {
+    transition: opacity 0.2s ease;
+}
+
+#email-label.fade-out {
+    opacity: 0;
 }
 
 /* Spotify fade-in */

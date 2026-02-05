@@ -5,9 +5,11 @@
     const lightIcon = document.getElementById('theme-icon-light');
     const darkIcon = document.getElementById('theme-icon-dark');
 
-    // Get saved theme or default to light
+    // Get saved theme, or fall back to system preference
     function getTheme() {
-        return localStorage.getItem('theme') || 'light';
+        var saved = localStorage.getItem('theme');
+        if (saved) return saved;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
     // Set theme

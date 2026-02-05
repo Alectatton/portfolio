@@ -40,3 +40,33 @@
         themeToggle.addEventListener('click', toggleTheme);
     }
 })();
+
+// Scroll spy for nav pills
+(function() {
+    const pills = document.querySelectorAll('.nav-pill');
+    const sections = [];
+
+    pills.forEach(function(pill) {
+        const href = pill.getAttribute('href');
+        if (href === '#') {
+            sections.push({ pill: pill, el: null });
+        } else {
+            const el = document.querySelector(href);
+            if (el) sections.push({ pill: pill, el: el });
+        }
+    });
+
+    function update() {
+        var active = sections[0];
+        for (var i = 1; i < sections.length; i++) {
+            if (sections[i].el && sections[i].el.getBoundingClientRect().top <= 120) {
+                active = sections[i];
+            }
+        }
+        sections.forEach(function(s) { s.pill.classList.remove('active'); });
+        if (active) active.pill.classList.add('active');
+    }
+
+    window.addEventListener('scroll', update);
+    update();
+})();

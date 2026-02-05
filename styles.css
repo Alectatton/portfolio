@@ -197,8 +197,17 @@ a, button, .skill-tag, .nav-icon, .footer-link, .theme-toggle {
     color: var(--text-primary);
 }
 
+.nav-pill.active {
+    background-color: rgba(61, 64, 60, 0.04);
+    color: var(--text-primary);
+}
+
 [data-theme="dark"] .nav-pill {
     border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .nav-pill.active {
+    background-color: rgba(255, 255, 255, 0.04);
 }
 
 [data-theme="dark"] .nav-pill:hover {

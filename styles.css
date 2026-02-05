@@ -374,6 +374,21 @@ html {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+/* Mobile: Hide navigation */
+@media (max-width: 767px) {
+    .navbar {
+        display: none;
+    }
+
+    body::before {
+        display: none;
+    }
+
+    main.container {
+        padding-top: 40px !important;
+    }
+}
+
 /* Footer */
 footer {
     background-color: var(--bg-primary);

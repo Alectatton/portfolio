@@ -98,3 +98,23 @@
         });
     });
 })();
+
+// Live clock (MST)
+(function() {
+    var clock = document.getElementById('live-clock');
+    if (!clock) return;
+
+    function update() {
+        var now = new Date().toLocaleTimeString('en-US', {
+            timeZone: 'America/Denver',
+            hour: 'numeric',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+        clock.textContent = now;
+    }
+
+    update();
+    setInterval(update, 1000);
+})();

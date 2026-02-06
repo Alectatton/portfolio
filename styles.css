@@ -152,28 +152,38 @@ a, button, .skill-tag, .nav-icon, .footer-link, .theme-toggle {
 }
 
 /* Theme toggle button */
-.theme-toggle {
+.theme-toggle-float {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
     background: none;
     border: none;
-    color: var(--text-primary);
+    color: var(--text-muted);
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 6px;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    z-index: 1030;
 }
 
-.theme-toggle:hover {
+.theme-toggle-float:hover {
+    color: var(--text-primary);
     background-color: rgba(61, 64, 60, 0.05);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transform: translateY(-1px);
 }
 
-[data-theme="dark"] .theme-toggle:hover {
+[data-theme="dark"] .theme-toggle-float:hover {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 767px) {
+    .theme-toggle-float {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
 }
 
 /* Navigation pills */
@@ -185,29 +195,25 @@ a, button, .skill-tag, .nav-icon, .footer-link, .theme-toggle {
     text-decoration: none;
     transition: all 0.2s ease;
     background-color: transparent;
-    border: 1px solid rgba(61, 64, 60, 0.08);
+    border: 1px solid transparent;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
 
 .nav-pill:hover {
     background-color: rgba(61, 64, 60, 0.05);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    transform: translateY(-1px);
     color: var(--text-primary);
 }
 
 .nav-pill.active {
-    background-color: rgba(61, 64, 60, 0.04);
+    background-color: rgba(61, 64, 60, 0.06);
+    border-color: rgba(61, 64, 60, 0.08);
     color: var(--text-primary);
-}
-
-[data-theme="dark"] .nav-pill {
-    border-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .nav-pill.active {
     background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .nav-pill:hover {
